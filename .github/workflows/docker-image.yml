@@ -1,5 +1,7 @@
 name: Docker Image CI
 
+# see https://medium.com/platformer-blog/lets-publish-a-docker-image-to-docker-hub-using-a-github-action-f0b17e5cceb3
+
 on:
   push:
     branches: [ master ]
@@ -14,12 +16,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    
     - name: dcoker login
       env: 
         DOCKER_USER: ${{secrets.DOCKER_USER}}
         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
-    - run: |
+      run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+    
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag ${{secrets.DOCKER_USER}}/avr-toolchain:latest
       
