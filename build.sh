@@ -1,5 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 TAG=${TAG:-latest}
 
-docker build --rm -t lpodkalicki/avr-toolchain:${TAG} .
+docker build --rm -t fedorkotov/avr-toolchain:${TAG} .

@@ -1,12 +1,23 @@
-FROM alpine:3.14
+FROM alpine:3.15
 
-MAINTAINER Lukasz Marcin Podkalicki <lpodkalicki@gmail.com>
+MAINTAINER Fedor Kotov <fedorkotov@gmail.com>
+# Original auttor Łukasz Podkalicki
+# https://hub.docker.com/r/fedorkotov/avr-toolchain
 
-# Prepare directory for tools
 ARG TOOLS_PATH=/tools
 RUN mkdir ${TOOLS_PATH}
 WORKDIR ${TOOLS_PATH}
 
-RUN apk --no-cache add ca-certificates wget make cmake avrdude avr-libc gcc-avr
+RUN apk update && \
+    apk upgrade && \
+    apk --no-cache add \
+        ca-certificates \
+        wget \
+        make \
+        cmake \
+        avrdude \
+        avr-libc \
+        gcc-avr \
+        git
 
 WORKDIR /build
