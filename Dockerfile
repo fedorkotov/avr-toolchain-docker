@@ -18,6 +18,7 @@ RUN apk update && \
         avrdude \
         avr-libc \
         gcc-avr \
+        binutils-avr \
         git
 
 WORKDIR /build
