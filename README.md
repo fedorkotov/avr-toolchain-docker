@@ -1,4 +1,4 @@
-# Overview
+# docker image with AVR toolchain ![CI][]
 
 Docker image built on top of **Ubuntu** 
 with installed AVR toolchain and few additional tools:
@@ -8,6 +8,7 @@ with installed AVR toolchain and few additional tools:
 * make
 * cmake
 * git
+* python modules junit_xml and pyparsing required by a [script](https://github.com/ThrowTheSwitch/Unity/blob/master/auto/unity_to_junit.py) that converts output of [Unity test framework](https://github.com/ThrowTheSwitch/Unity) to JUnit format compatible with GitLab CI
 
 DockerHub: https://hub.docker.com/r/fedorkotov/avr-toolchain
 
