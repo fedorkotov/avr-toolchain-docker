@@ -1,4 +1,4 @@
-# docker image with AVR toolchain ![CI][]
+# docker image with AVR toolchain ![CI](https://github.com/fedorkotov/avr-toolchain-docker/actions/workflows/docker-image.yml/badge.svg)
 
 Docker image built on top of **Ubuntu** 
 with installed AVR toolchain and few additional tools:
