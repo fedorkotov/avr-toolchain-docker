@@ -19,6 +19,8 @@ RUN apt update && \
     gcc-avr \
     avr-libc \
     avrdude \
-    binutils-avr
-
+    binutils-avr \
+    python3-pyparsing \
+    python3-junit.xml
+    
 WORKDIR /build
