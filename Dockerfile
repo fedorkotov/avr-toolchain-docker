@@ -21,6 +21,7 @@ RUN apt update && \
     avrdude \
     binutils-avr \
     python3-pyparsing \
-    python3-junit.xml
+    python3-junit.xml \
+    gcovr
     
 WORKDIR /build
